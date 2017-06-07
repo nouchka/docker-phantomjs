@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  heroku:
+    image: nouchka/phantomjs:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./config/:/workspace/
+

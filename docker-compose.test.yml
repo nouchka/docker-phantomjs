@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  sut:
+    build: .
+    image: nouchka/phantomjs:latest
+    entrypoint: bash -c "phantomjs --version && phantomjs --ssl-protocol=any /usr/local/share/loadspeed.js https://nouchka.katagena.com"
