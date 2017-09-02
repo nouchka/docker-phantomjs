@@ -9,7 +9,7 @@
 
 # Versions
 
-* latest (ship with php5)
+* latest (ship with phantomjs 2.1.1)
 
 # Image
 Install phantomjs cli. Use make install to setup the command.
