@@ -34,6 +34,8 @@ RUN export uid=1000 gid=1000 && \
 WORKDIR /home/developer/workspace
 USER developer
 
+ADD start.sh /start.sh
+
 ENTRYPOINT [ "phantomjs" ]
 
 ##ARG YSLOW_VERSION=3.1.8

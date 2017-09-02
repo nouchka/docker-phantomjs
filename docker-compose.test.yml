@@ -4,4 +4,7 @@ services:
   sut:
     build: .
     image: nouchka/phantomjs:latest
-    entrypoint: bash -c "phantomjs --version && phantomjs --ssl-protocol=any /usr/local/share/loadspeed.js https://nouchka.katagena.com"
+    entrypoint: bash -c "phantomjs --version && phantomjs --ssl-protocol=any /usr/local/share/loadspeed.js https://nouchka.katagena.com && /start.sh"
+    environment:
+      - SITES=https://www.democracy-cc.org/ https://nouchka.katagena.com
+      - IDS=test_dcc test_nouchka
