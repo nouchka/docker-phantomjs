@@ -5,9 +5,7 @@ LABEL version="latest"
 
 RUN apt-get update --fix-missing && \
 	apt-get update && \
-	apt-get install -y -q  \
-		--no-install-recommends \
-		wget ca-certificates bzip2 libfontconfig unzip cron
+	apt-get install -y -q wget ca-certificates bzip2 libfontconfig unzip cron
 
 ARG PHANTOMJS_VERSION=2.1.1
 ARG PHANTOMJS_FILE_SHA256SUM=86dd9a4bf4aee45f1a84c9f61cf1947c1d6dce9b9e8d2a907105da7852460d2f
