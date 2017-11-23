@@ -1,5 +1,5 @@
 FROM debian:stable-slim
-MAINTAINER Jean-Avit Promis "docker@katagena.com"
+LABEL maintainer="Jean-Avit Promis docker@katagena.com"
 LABEL org.label-schema.vcs-url="https://github.com/nouchka/docker-phantomjs"
 LABEL version="latest"
 
