@@ -18,7 +18,7 @@ RUN cd /tmp && \
 	cp /tmp/phantomjs/bin/phantomjs /usr/local/bin/ && \
 	chmod +x /usr/local/bin/phantomjs
 
-ADD https://raw.githubusercontent.com/ariya/phantomjs/master/examples/loadspeed.js /usr/local/share/loadspeed.js
+COPY loadspeed.js /usr/local/share/loadspeed.js
 RUN chmod 777 /usr/local/share/loadspeed.js
 
 RUN apt-get purge --auto-remove -y wget bzip2 unzip && \
