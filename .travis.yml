@@ -6,7 +6,7 @@ before_install:
   - gem install fpm package_cloud
 
 script:
-  - make test
+##  - make test
   - make push-deb
 
 notifications:
