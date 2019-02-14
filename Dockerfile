@@ -10,6 +10,7 @@ RUN apt-get update --fix-missing && \
 ARG PHANTOMJS_VERSION=2.1.1
 ARG PHANTOMJS_FILE_SHA256SUM=86dd9a4bf4aee45f1a84c9f61cf1947c1d6dce9b9e8d2a907105da7852460d2f
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN cd /tmp && \
 	wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${PHANTOMJS_VERSION}-linux-x86_64.tar.bz2 -O phantomjs.tar.bz2 && \
 	echo "${PHANTOMJS_FILE_SHA256SUM}  /tmp/phantomjs.tar.bz2"| sha256sum -c -  && \
@@ -34,7 +35,7 @@ RUN export uid=1000 gid=1000 && \
 WORKDIR /home/developer/workspace
 USER developer
 
-ADD start.sh /start.sh
+COPY start.sh /start.sh
 
 ENTRYPOINT [ "phantomjs" ]
 
